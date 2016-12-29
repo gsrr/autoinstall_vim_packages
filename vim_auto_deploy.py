@@ -52,12 +52,66 @@ def nerdtree_install():
     ]
     execcmds(cmds)
 
+def snipmate_install():
+    cmds = [
+    "rm -rf ~/.vim/bundle/tlib_vim",
+    "git clone https://github.com/tomtom/tlib_vim.git ~/.vim/bundle/tlib_vim",
+    "rm -rf ~/.vim/bundle/vim-addon-mw-utils",
+    "git clone https://github.com/MarcWeber/vim-addon-mw-utils.git ~/.vim/bundle/vim-addon-mw-utils",
+    "rm -rf ~/.vim/bundle/vim-snipmate",
+    "git clone https://github.com/garbas/vim-snipmate.git ~/.vim/bundle/vim-snipmate",
+    "rm -rf ~/.vim/bundle/vim-snippets",
+    "git clone https://github.com/honza/vim-snippets.git ~/.vim/bundle/vim-snippets",
+    ]
+    execcmds(cmds)
+
+def syntastic_install():
+    cmds = [
+    "rm -rf ~/.vim/bundle/syntastic",
+    "git clone https://github.com/scrooloose/syntastic ~/.vim/bundle/syntastic",
+    ]
+    execcmds(cmds)
+
+def supertab_install():
+    cmds = [
+    "rm -rf ~/.vim/bundle/supertab",
+    "git clone https://github.com/ervandew/supertab ~/.vim/bundle/supertab",
+    ]
+    execcmds(cmds)
+   
+def ctrlp_install():
+    cmds = [
+    "rm -rf ~/.vim/bundle/ctrlp",
+    "git clone https://github.com/kien/ctrlp.vim ~/.vim/bundle/ctrlp.vim"
+    ]
+    execcmds(cmds)
+    
+def airline_install():
+    cmds = [
+    "rm -rf ~/.vim/bundle/airline",
+    "git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline",
+    ]
+    execcmds(cmds)
+
+def fugitive_install():
+    cmds = [
+    "rm -rf ~/.vim/bundle/fugitive",
+    "git clone https://github.com/tpope/vim-fugitive ~/.vim/bundle/vim-fugitive",
+    ]
+    execcmds(cmds)
+    
 Procedure = [
     ('Deploy vimrc', vimrc_deploy),
     ('Install pathogen', pathogen_install),
     ('Install powerline', powerline_install),
+    ('Install airline', airline_install),
     ('Install monokai', monokai_install),
     ('Install nerdtree', nerdtree_install),
+    ('Install snipmate', snipmate_install),
+    ('Install syntastic', syntastic_install),
+    ('Install supertab', supertab_install),
+    ('Install ctrlp', ctrlp_install),
+    ('Install fugitive', fugitive_install),
 ]
 
 def main():
